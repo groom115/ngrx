@@ -4,16 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { countReducer } from './redux/reducers/counter.reducer';
 import { CounterComponent } from './counter/counter.component';
+import { rootReducer } from './redux/store';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
-  declarations: [AppComponent, CounterComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    StoreModule.forRoot({ count: countReducer }),
-  ],
+  declarations: [AppComponent, CounterComponent, RxjsComponent],
+  imports: [BrowserModule, AppRoutingModule, StoreModule.forRoot(rootReducer)],
   providers: [],
   bootstrap: [AppComponent],
 })
