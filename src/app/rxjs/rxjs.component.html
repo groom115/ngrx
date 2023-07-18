@@ -1,0 +1,5 @@
+<p>rxjs works!</p>
+<div *ngIf="data$ | async as data">
+  <div *ngFor="let user of data.user">{{ user.name }}</div>
+  <div *ngFor="let username of data.username">{{ username }}</div>
+</div>
